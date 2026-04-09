@@ -1,36 +1,53 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Syne';
+  src: url('./assets/fonts/Syne-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  src: url('./assets/fonts/DMMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@theme {
+  /* Fonts */
+  --font-syne: 'Syne', sans-serif;
+  --font-synebold: 'Syne Bold', sans-serif;
+  --font-dm-mono: 'DM Mono', monospace;
+
+  --text-xxs: 10px;
+
+  /* Colors */
+  --color-accent: #C04A28;
+  --color-cr: #F5F0E8;
+  --color-ink: #16150E;
+  --color-muted: #78756C;
+  --color-sub: #AEA9A0;
+  --color-acc: #C04A28;
+  --color-abg: rgba(192,74,40,0.06);
+  --color-abr: rgba(192,74,40,0.28);
+  --color-nemo: #E8621A;
+  --color-bd: rgba(22,21,14,0.1);
+  --color-bd2: rgba(22,21,14,0.18);
+  --color-card: rgba(254,252,248,0.9);
+}
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #F5F0E8;
 
   @media (max-width: 1024px) {
     font-size: 16px;
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
@@ -48,18 +65,21 @@
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
-}
+} */
 
 #root {
-  width: 1126px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 880px;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
+  /* min-height: 100svh; */
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  padding: 0 1rem;
+  flex: row;
+  flex-direction: column;
+  gap: 0.1rem;
 }
 
 body {
