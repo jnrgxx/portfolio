@@ -1,8 +1,8 @@
 export default function Footer() {
     
     return (
-        <div className="flex">
+        <footer className="flex">
             Footer
-        </div>
+        </footer>
     )
 }

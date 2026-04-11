@@ -7,14 +7,14 @@ export default function Nav() {
     ]
     
     return (
-        <div className="border border-bd flex items-center justify-between h-12 px-4">
+        <header className="border border-bd flex items-center justify-between h-12 px-4">
             <a href="#" className="flex font-dm-mono text-xs items-center justify-between w-10">
                 <p className="font-bold text-acc">[</p>
                 <p className="text-muted">JRT</p>
                 <p className="font-bold text-acc">]</p>
             </a>
 
-            <div className="flex font-syne justify-between h-6 w-96 items-center">
+            <nav className="flex font-syne justify-between h-6 w-96 items-center">
 
                 {links.map(l => 
                     <a key={l.href} href={l.href} className="font-syne font-bold text-xxs no-underline text-muted">
@@ -36,7 +36,7 @@ export default function Nav() {
                 <button className="bg-black py-1 px-3 font-dm-mono text-white p-1 h-6 text-xxs">
                     resume ↗
                 </button>
-            </div>
-        </div>
+            </nav>
+        </header>
     )
 }

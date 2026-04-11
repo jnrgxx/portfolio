@@ -3,7 +3,7 @@ import Nav from './Components/Nav'
 import Hero from './Sections/Hero'
 
 import About from './Sections/About'
-import Work from './Sections/Work'
+import Projects from './Sections/Projects'
 import Journey from './Sections/Journey'
 import Connect from './Sections/Connect'
 import Footer from './Components/Footer'
@@ -14,7 +14,7 @@ export default function App() {
         <Nav />
         <Hero />
         <About />
-        <Work />
+        <Projects />
         <Journey />
         <Connect />
         <Footer />
