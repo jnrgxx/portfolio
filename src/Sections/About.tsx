@@ -27,8 +27,8 @@ export default function About() {
              <div className="w-3/5 flex justify-start">
                 {/* Left */}
                 <div className="flex flex-col items-start">
-                    <h2 className="font-dmserif text-2xl mb-3 font-bold tracking-tight">Build with <span className="italic text-acc">intent.</span> Made for real-world use</h2>
-                    <p className="text-muted text-xs font-syne text-left mb-10">CS graduate and Test Engineer focused on full stack development, quality, and performance.</p>
+                    <h2 className="font-dmserif text-2xl mb-3 font-bold tracking-tight">Build with <span className="italic text-acc">intent.</span> Fueled by curiosity.</h2>
+                    <p className="text-muted text-xs font-syne text-left mb-10">CS graduate and Test Engineer building full-stack systems that are designed, tested, and ready for real-world use.</p>
                 
                     <div className="w-full border-t-[0.5px] border-bd pt-3.5">
                         <Stack arr={techStack} />
