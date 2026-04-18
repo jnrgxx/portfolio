@@ -3,7 +3,7 @@ import Clock from '../Components/Clock';
 export default function Hero() {
 
     return (
-        <section className="relative overflow-hidden flex p-5 flex-col h-[30rem] border border-bd bg-cr">
+        <section className="relative overflow-hidden flex p-section-pad flex-col h-hero-height border border-bd bg-cr">
              <div className="tracking-wider mb-5 border-[0.5px] border-abr py-[5px] px-[10px] flex gap-4 font-dm-mono text-xxs text-muted bg-abg">
                 <p className="text-acc font-med">[ 01 ]</p>
                 <span className="text-acc">::</span>
@@ -11,7 +11,7 @@ export default function Hero() {
              </div>
 
             {/* Chips */}
-             <div className="text-[9px] flex font-dm-mono gap-2 mb-3">
+             <div className="text-chip flex font-dm-mono gap-2 mb-3">
                 <span className="text-grn flex gap-1 items-center px-[9px] py-[3px] bg-ltgrn bg-opacity-40">
                     <span className="animate-pulse inline-block h-[5px] w-[5px]  rounded-[50%]  bg-grn"></span>
                     open for work
@@ -21,7 +21,7 @@ export default function Hero() {
              </div>
 
             {/* NAME */}
-             <div className="leading-none text-[52px] font-dmserif flex flex-col items-start mb-4">
+             <div className="leading-none text-hero-name font-dmserif flex flex-col items-start mb-6">
                 John Rogee
                 <em className="italic text-acc after:content-['|'] after:not-italic after:ml-[1px] after:animate-cursor-blink">
                     Turqueza
@@ -38,20 +38,20 @@ export default function Hero() {
              </div>
 
             {/* QUOTE */}
-             <p className="italic mb-5 font-syne text-muted text-sm max-w-[500px] flex">“Make it work, make it right, make it fast.” — Kent Beck</p>
+             <p className="italic mb-5 font-syne text-muted text-base max-w-[620px] flex">“Make it work, make it right, make it fast.” — Kent Beck</p>
 
             {/*  */}
-            <div className="flex gap-2 mb-5 text-xxs font-dm-mono">
-                <div className="bg-ink text-cr py-2 px-4 border border-muted py-1 px-2">📅 schedule a call</div>
-                <div className="py-2 px-4 border border-bd2 py-1 px-2">✉ send email</div>
-                <div className="py-2 px-4 border border-bd2 py-1 px-2">📄 resume</div>
+            <div className="flex gap-2 mb-5 text-xs font-dm-mono">
+                <div className="bg-ink text-cr py-2 px-4 border border-muted">📅 schedule a call</div>
+                <div className="py-2 px-4 border border-bd2">✉ send email</div>
+                <div className="py-2 px-4 border border-bd2">📄 resume</div>
             </div>
         
-        <div className="mt-20 border-t-[0.5px] border-bd">
-            <span className="text-sub font-dm-mono text-xxs select-none">scroll ↓</span>
-        </div>
+            <div className="mt-34 border-t-[0.5px] border-bd">
+                <span className="text-sub font-dm-mono text-xs select-none">scroll ↓</span>
+            </div>
 
-        <div className="select-none font-syne absolute text-[80px] -bottom-2 right-2 text-sectext">HERO</div>
+            <div className="select-none font-descal absolute text-section-watermark -bottom-2 right-2 text-sectext">Rogee</div>
 
         
         </section>

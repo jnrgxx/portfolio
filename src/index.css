@@ -32,6 +32,14 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Desirable Calligraphy';
+  src:
+    url('./assets/fonts/DesirableCalligraphy.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
 
 @theme {
   /* Fonts */
@@ -39,8 +47,22 @@
   --font-synebold: 'Syne Bold', sans-serif;
   --font-dm-mono: 'DM Mono', monospace;
   --font-dmserif: 'DM Serif', serif;
+  --font-descal: 'Desirable Calligraphy', serif;
 
+  /* Typography scale */
   --text-xxs: 10px;
+  --text-chip: 9px;
+  --text-hero-name: 64px;
+  --text-section-heading: 34px;
+  --text-section-watermark: 110px;
+
+  /* Layout scale */
+  --spacing-section-pad: 1.75rem;
+  --spacing-hero-height: 36rem;
+  --spacing-section-height: 74rem;
+  --spacing-section-height-base: 67.5rem;
+  --spacing-nav-width: 28rem;
+
 
   /* Colors */
   --color-cr: #F5F0E8;
@@ -56,6 +78,7 @@
   --color-card: rgba(254,252,248,0.9);
   --color-ltgrn: #D4EDDA;
   --color-grn: #2A6241;
+  --color-blkgrn: #76D09A;
   --color-sectext: rgba(192,74,40,0.045);
 
   --animate-cursor-blink: cursor-blink 1s step-end infinite ;
@@ -96,7 +119,7 @@
 
 #root {
   width: 100%;
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
   /* min-height: 100svh; */
