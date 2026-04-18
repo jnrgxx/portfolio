@@ -7,6 +7,8 @@ type StackProps = {
     readonly arr: Stackture[];
 }
 
+// Note: I didn't put the object of Stack here with the details because i want to re-use this in specific project page
+
 export default function Stack({ arr }: StackProps) {
     return (
         <>

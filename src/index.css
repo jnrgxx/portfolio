@@ -132,6 +132,12 @@
   gap: 0.1rem;
 }
 
+* {
+  box-sizing: border-box;
+
+}
+
 body {
   margin: 0;
+  font-family: 'Syne', sans-serif;
 }

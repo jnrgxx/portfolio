@@ -3,12 +3,12 @@ import GithubUserEvents from '../Components/GithubEvents';
 
 export default function About() {
 
-    type Stackture = {
+    type StackStructure = {
         category: string,
         tech: Array<string>
     }
 
-    const techStack: Stackture[] = [
+    const techStack: StackStructure[] = [
         {category: "Programming & Scripting", tech: ["PHP", "JavaScript", "Java", "Python", "Groovy", "SQL"]},
         {category: "Web & Backend", tech: ["ReactJS", "Laravel", "REST APIs", "MySQL", "PostgreSQL"]},
         {category: "Testing & DevOps", tech: ["JMeter", "Katalon Studio", "Postman", "Git", "GitHub", "Docker"]},
