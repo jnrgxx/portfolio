@@ -13,12 +13,12 @@ export default function About() {
         {category: "Web & Backend", tech: ["ReactJS", "Laravel", "REST APIs", "MySQL", "PostgreSQL"]},
         {category: "Testing & DevOps", tech: ["JMeter", "Katalon Studio", "Postman", "Git", "GitHub", "Docker"]},
         {category: "Cloud & Platforms", tech: ["Microsoft Azure", "Linux"]},
-        {category: "Design & Collaboration", tech: ["Figma", "Obsidian"]},
+        {category: "Design & Collaboration", tech: ["Figma", "Obsidian", "Notion"]},
     ];
 
     return (
         <section className="overflow-hidden relative flex flex-col h-hero-height border border-bd bg-cr p-section-pad">
-             <div className="tracking-wider border-[0.5px] border-acc py-[5px] px-[10px] mb-5 flex gap-2 font-dm-mono text-xxs text-muted bg-abg">
+             <div className="tracking-wider border-[0.5px] border-acc py-[5px] px-[10px] mb-5 flex gap-4 font-dm-mono text-xxs text-muted bg-abg">
                 <p className="text-acc font-med">[ 02 ]</p>
                 <span className="text-acc">::</span>
                 cat about.md
