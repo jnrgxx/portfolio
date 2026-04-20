@@ -6,7 +6,6 @@ import About from './Sections/About'
 import Projects from './Sections/Projects'
 import Journey from './Sections/Journey'
 import Connect from './Sections/Connect'
-import Footer from './Components/Footer'
 
 export default function App() {
   return (
@@ -17,7 +16,6 @@ export default function App() {
         <Projects />
         <Journey />
         <Connect />
-        <Footer />
       </>
 
   )
