@@ -21,6 +21,7 @@ export default function Journey() {
                     {/* Main Content */}
                     <div className="flex">
                         <div className="w-px bg-bd absolute"></div>
+                        <div className="">2024</div>
                     </div>
                 </div>
 
