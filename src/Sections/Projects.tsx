@@ -1,37 +1,38 @@
+
+// projects name, description, tech stack, link 
+
+interface ProjectStructure {
+    name: string,
+    desc: string,
+    stack: Array<string>,
+    url: string,
+}
+
+interface certStructure {
+    name: string,
+    company: string,
+    source: string,
+    verified: boolean,
+    url: string,
+}
+
+// Top 4: Projects
+const projects: ProjectStructure[] = [
+    {name: "Zealia", desc: "RIASEC Team Matching Website", stack: ["PHP", "JavaScript", "TailwindCSS"], url: "https://github.com/jnrgxx/Zealia"},
+    {name: "are.na-blocks-canvas", desc: "RIASEC Team Matching Website", stack: ["PHP", "JavaScript", "TailwindCSS"], url: "https://github.com/jnrgxx/"},
+    {name: "3", desc: "RIASEC Team Matching Website", stack: ["PHP", "JavaScript", "TailwindCSS"], url: "https://github.com/jnrgxx/Zwww"},
+    {name: "coming soon...", desc: "Something is cooking in the lab.", stack: ["???"], url: "#"}
+]
+
+// Top 3: Certifications
+
+const certs: certStructure[] = [
+    {name: "Certified Support Technician Cybersecurity (CCST Cybersecurity)", company: "Cisco", source: "Certiport", verified: true, url: "https://www.credly.com/badges/bc2ec00f-6132-4eaf-ab01-6a4c0a89d89c/linked_in_profile"},
+    {name: "PCAP: Programming Essentials in Python", company: "Cisco Networking Academy & OpenEDG Python Institute", source: "Netacad", verified: true, url: "https://www.linkedin.com/in/jrogeet/details/certifications/1734626606926/single-media-viewer?type=DOCUMENT&profileId=ACoAAEJd4MEBcNifXTtCX7fSTLw2-bqBBsTXlC0&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BkUL923axQFCs%2FlHOFgF%2Bxg%3D%3D"},
+    {name: "Introduction to Software Engineering", company: "IBM", source: "Coursera", verified: true, url: "https://www.coursera.org/account/accomplishments/verify/MIOS4AP9U8C6"},
+]
+
 export default function Projects() {
-
-    // projects name, description, tech stack, link 
-
-    interface ProjectStructure {
-        name: string,
-        desc: string,
-        stack: Array<string>,
-        url: string,
-    }
-
-    interface certStructure {
-        name: string,
-        company: string,
-        source: string,
-        verified: boolean,
-        url: string,
-    }
-
-    // Top 4: Projects
-    const projects: ProjectStructure[] = [
-        {name: "Zealia", desc: "RIASEC Team Matching Website", stack: ["PHP", "JavaScript", "TailwindCSS"], url: "https://github.com/jnrgxx/Zealia"},
-        {name: "are.na-blocks-canvas", desc: "RIASEC Team Matching Website", stack: ["PHP", "JavaScript", "TailwindCSS"], url: "https://github.com/jnrgxx/"},
-        {name: "3", desc: "RIASEC Team Matching Website", stack: ["PHP", "JavaScript", "TailwindCSS"], url: "https://github.com/jnrgxx/Zwww"},
-        {name: "coming soon...", desc: "Something is cooking in the lab.", stack: ["???"], url: "#"}
-    ]
-
-    // Top 3: Certifications
-
-    const certs: certStructure[] = [
-        {name: "Certified Support Technician Cybersecurity (CCST Cybersecurity)", company: "Cisco", source: "Certiport", verified: true, url: "https://www.credly.com/badges/bc2ec00f-6132-4eaf-ab01-6a4c0a89d89c/linked_in_profile"},
-        {name: "PCAP: Programming Essentials in Python", company: "Cisco Networking Academy & OpenEDG Python Institute", source: "Netacad", verified: true, url: "https://www.linkedin.com/in/jrogeet/details/certifications/1734626606926/single-media-viewer?type=DOCUMENT&profileId=ACoAAEJd4MEBcNifXTtCX7fSTLw2-bqBBsTXlC0&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BkUL923axQFCs%2FlHOFgF%2Bxg%3D%3D"},
-        {name: "Introduction to Software Engineering", company: "IBM", source: "Coursera", verified: true, url: "https://www.coursera.org/account/accomplishments/verify/MIOS4AP9U8C6"},
-    ]
 
     return (
         <section className="overflow-hidden relative flex flex-col min-h-hero-height border border-bd bg-cr p-section-pad">
