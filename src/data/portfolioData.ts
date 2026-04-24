@@ -16,7 +16,7 @@ export interface Certificate {
 export const projects: Project[] = [
   {
     name: 'Zealia',
-    desc: 'RIASEC Balanced Team Matching Website',
+    desc: 'Team Composition and Role Assignment Web-Based Application for Computing Research using Sorting Algorithm',
     stack: ['PHP', 'JavaScript', 'TailwindCSS'],
     url: 'https://github.com/jnrgxx/Zealia',
   },
