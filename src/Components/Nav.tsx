@@ -33,9 +33,9 @@ export default function Nav() {
                     )}
                 </ul> */}
 
-                <button className="bg-black py-2 px-4 font-dm-mono text-white h-8 text-xs">
+                <a href="/John-Rogee-Turqueza-Resume.pdf" target="_blank" className="bg-black py-2 px-4 font-dm-mono text-white h-8 text-xs no-underline inline-flex items-center">
                     resume ↗
-                </button>
+                </a>
             </nav>
         </header>
     )

@@ -27,10 +27,10 @@ export const projects: Project[] = [
     url: 'https://ambition-beta.vercel.app/',
   },
   {
-    name: '3',
-    desc: 'RIASEC Team Matching Website',
-    stack: ['PHP', 'JavaScript', 'TailwindCSS'],
-    url: 'https://github.com/jnrgxx/Zwww',
+    name: 'lore-of-legends',
+    desc: 'Interactive storytelling platform blending AI-powered narratives with user-driven choices to create personalized legend-like adventures.',
+    stack: ['React', 'TypeScript', 'TailwindCSS', 'FastAPI'],
+    url: 'https://github.com/jnrgxx/lore-of-legends',
   },
   {
     name: 'coming soon...',

@@ -9,11 +9,13 @@ export default function About() {
     }
 
     const techStack: StackStructure[] = [
-        {category: "Programming & Scripting", tech: ["PHP", "JavaScript", "Java", "Python", "Groovy", "SQL"]},
-        {category: "Web & Backend", tech: ["ReactJS", "Laravel", "REST APIs", "MySQL", "PostgreSQL"]},
-        {category: "Testing & DevOps", tech: ["JMeter", "Katalon Studio", "Postman", "Git", "GitHub", "Docker"]},
-        {category: "Cloud & Platforms", tech: ["Microsoft Azure", "Linux"]},
-        {category: "Design & Collaboration", tech: ["Figma", "Obsidian", "Notion"]},
+        {category: "Programming Languages", tech: ["Python", "PHP", "JavaScript", "TypeScript", "Java", "SQL", "Groovy"]},
+        {category: "Backend & APIs", tech: ["FastAPI", "Laravel", "Node.js", "REST APIs", "SQLAlchemy", "Pydantic", "LangChain"]},
+        {category: "Frontend", tech: ["React", "TailwindCSS"]},
+        {category: "Databases", tech: ["PostgreSQL", "MySQL", "SQLite", "Supabase", "Neon"]},
+        {category: "Performance Testing & Automation", tech: ["JMeter", "Katalon Studio", "API Load Testing", "Test Automation"]},
+        {category: "DevOps & Cloud", tech: ["Docker", "GitHub Actions", "Azure DevOps", "Vercel", "Render", "Railway"]},
+        {category: "Monitoring & Tools", tech: ["Swagger/OpenAPI", "Grafana", "Postman", "Git", "Figma", "Notion"]},
     ];
 
     return (

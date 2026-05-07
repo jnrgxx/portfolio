@@ -24,7 +24,7 @@ export default function Connect() {
                     <div className="flex flex-col items-start">
                         <span className="font-dm-mono text-xxs text-sub mb-2">[ quick contact ]</span>
 
-                        <div className="bg-ink py-2 px-4 text-cr font-dm-mono text-xxs">jrogee@gmail.com</div>
+                        <div className="bg-ink py-2 px-4 text-cr font-dm-mono text-xxs">jrogeet@gmail.com</div>
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@ export default function Connect() {
                         </div>
 
                         <div className="font-dm-mono text-xs text-left w-full">
-                            <a href="#" target="_blank" className="py-1.5 flex justify-between flex gap-1.5">
+                            <a href="https://philippinecomputersociety.org/jpcs-2/" target="_blank" className="py-1.5 flex justify-between flex gap-1.5">
                                 <span className="text-acc">↗</span>
                                 Junior Philippine Computer Society (JPCS)
                             </a>
@@ -70,17 +70,17 @@ export default function Connect() {
                         </div>
 
                         <div className="font-dm-mono text-xs text-left w-full">
-                            <a href="#" target="_blank" className="border-b-[0.5px] border-bd py-1.5 flex justify-between">
+                            <a href="mailto:jrogeet@gmail.com" target="_blank" className="border-b-[0.5px] border-bd py-1.5 flex justify-between">
                                 <div className="">
                                     <span>✉ email</span>
                                     <p className="text-xxs text-muted">jrogeet@gmail.com</p>
                                 </div>
                                 <span className="text-sub font-dm-mono">&gt;</span>
                             </a>
-                            <a href="#" target="_blank" className="border-b-[0.5px] border-bd py-1.5 flex justify-between">
+                            <a href="/John-Rogee-Turqueza-Resume.pdf" target="_blank" className="border-b-[0.5px] border-bd py-1.5 flex justify-between">
                                 <div className="">
-                                    <span>📅 schedule a call</span>
-                                    <p className="text-xxs text-muted">pick a time</p>
+                                    <span>📄 resume</span>
+                                    <p className="text-xxs text-muted">download pdf</p>
                                 </div>
                                 <span className="text-sub font-dm-mono">&gt;</span>
                             </a>

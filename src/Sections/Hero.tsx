@@ -42,9 +42,8 @@ export default function Hero() {
 
             {/*  */}
             <div className="flex gap-2 mb-5 text-xs font-dm-mono">
-                <div className="bg-ink text-cr py-2 px-4 border border-muted">📅 schedule a call</div>
-                <div className="py-2 px-4 border border-bd2">✉ send email</div>
-                <div className="py-2 px-4 border border-bd2">📄 resume</div>
+                <a href="mailto:jrogeet@gmail.com" className="bg-ink text-cr py-2 px-4 border border-muted no-underline">✉ send email</a>
+                <a href="/John-Rogee-Turqueza-Resume.pdf" target="_blank" className="py-2 px-4 border border-bd2 no-underline">📄 resume</a>
             </div>
         
             <div className="mt-34 border-t-[0.5px] border-bd">
