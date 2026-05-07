@@ -15,6 +15,12 @@ export interface Certificate {
 
 export const projects: Project[] = [
   {
+    name: 'Lore of Legends',
+    desc: 'Interactive storytelling platform blending AI-powered narratives with user-driven choices to create personalized legend-like adventures.',
+    stack: ['Fast API', 'React', 'PostgreSQL', 'LangChain', 'TypeScript', ],
+    url: 'https://github.com/jnrgxx/lore-of-legends',
+  },
+  {
     name: 'Zealia',
     desc: 'Team Composition and Role Assignment Web-Based Application for Computing Research using Sorting Algorithm',
     stack: ['PHP', 'JavaScript', 'TailwindCSS'],
@@ -25,12 +31,6 @@ export const projects: Project[] = [
     desc: 'MBTI Personalities Balanced Group Matching',
     stack: ['JavaScript', 'HTML', 'CSS'],
     url: 'https://ambition-beta.vercel.app/',
-  },
-  {
-    name: 'lore-of-legends',
-    desc: 'Interactive storytelling platform blending AI-powered narratives with user-driven choices to create personalized legend-like adventures.',
-    stack: ['React', 'TypeScript', 'TailwindCSS', 'FastAPI'],
-    url: 'https://github.com/jnrgxx/lore-of-legends',
   },
   {
     name: 'coming soon...',
