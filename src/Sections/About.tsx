@@ -10,12 +10,12 @@ export default function About() {
 
     const techStack: StackStructure[] = [
         {category: "Programming Languages", tech: ["Python", "PHP", "JavaScript", "TypeScript", "Java", "SQL", "Groovy"]},
-        {category: "Backend & APIs", tech: ["FastAPI", "Laravel", "Node.js", "REST APIs", "SQLAlchemy", "Pydantic", "LangChain"]},
+        {category: "Backend & APIs", tech: ["FastAPI", "REST APIs", "SQLAlchemy", "Pydantic", "LangChain"]},
         {category: "Frontend", tech: ["React", "TailwindCSS"]},
-        {category: "Databases", tech: ["PostgreSQL", "MySQL", "SQLite", "Supabase", "Neon"]},
-        {category: "Performance Testing & Automation", tech: ["JMeter", "Katalon Studio", "API Load Testing", "Test Automation"]},
-        {category: "DevOps & Cloud", tech: ["Docker", "GitHub Actions", "Azure DevOps", "Vercel", "Render", "Railway"]},
-        {category: "Monitoring & Tools", tech: ["Swagger/OpenAPI", "Grafana", "Postman", "Git", "Figma", "Notion"]},
+        {category: "Databases", tech: ["PostgreSQL", "MySQL", "Supabase", "Neon"]},
+        {category: "Testing & Automation", tech: ["JMeter", "Katalon Studio", "API Load Testing", "Test Automation"]},
+        {category: "DevOps & Deployment", tech: ["Docker", "Vercel", "Render", "Railway"]},
+        {category: "Tools & Monitoring", tech: ["Swagger/OpenAPI", "Grafana", "Postman", "Git", "Figma", "Notion"]},
     ];
 
     return (
@@ -30,9 +30,14 @@ export default function About() {
              <div className="flex justify-between">
                 {/* Left */}
                 <div className="w-[70%] flex flex-col items-start">
-                    <h2 className="font-dmserif text-section-heading leading-tight mb-3 font-bold tracking-tight">Build with <span className="italic text-acc">intent.</span> Fueled by curiosity.</h2>
-                    <p className="text-muted text-sm font-syne text-left mb-5">CS graduate and Test Engineer building full-stack systems that are designed, tested, and ready for real-world use.</p>
-                
+                    <h2 className="font-dmserif text-section-heading leading-tight mb-3 font-bold tracking-tight">
+                        Built from <span className="italic text-acc">curiosity.</span> Refined through learning.
+                    </h2>
+
+                    <p className="text-muted text-sm font-syne text-left mb-5">
+                    I’m a CS graduate passionate about programming, design, and building software that’s both functional and enjoyable to use.
+                    </p>
+
                     <div className="w-full border-t-[0.5px] border-bd pt-3.5">
                         <Stack arr={techStack} />
 
