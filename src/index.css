@@ -16,6 +16,14 @@
 }
 
 @font-face {
+  font-family: 'Geist Mono';
+  src:
+    url('./assets/fonts/GeistMono-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'DM Serif';
   src:
     url('./assets/fonts/DMSerifDisplay-Regular.ttf') format('truetype'),
@@ -42,46 +50,68 @@
 
 
 @theme {
-  /* Fonts */
-  --font-syne: 'Syne', sans-serif;
-  --font-synebold: 'Syne Bold', sans-serif;
-  --font-dm-mono: 'DM Mono', monospace;
-  --font-dmserif: 'DM Serif', serif;
-  --font-descal: 'Desirable Calligraphy', serif;
+  /* =========================
+     Fonts
+  ========================= */
 
-  /* Typography scale */
-  --text-xxs: 10px;
-  --text-chip: 9px;
-  --text-hero-name: 64px;
-  --text-section-heading: 34px;
-  --text-section-watermark: 110px;
+  --font-heading: "Syne", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-serif: "DM Serif Display", serif;
 
-  /* Layout scale */
-  --spacing-section-pad: 1.75rem;
-  --spacing-hero-height: 36rem;
-  --spacing-section-height: 74rem;
-  --spacing-section-height-base: 67.5rem;
-  --spacing-nav-width: 28rem;
+  /* =========================
+     Typography
+  ========================= */
 
+  --text-display: 64px;
+  --text-h1: 48px;
+  --text-h2: 32px;
+  --text-h3: 24px;
 
-  /* Colors */
-  --color-cr: #F5F0E8;
-  --color-ink: #16150E;
-  --color-muted: #78756C;
-  --color-sub: #AEA9A0;
-  --color-acc: #C04A28;
-  --color-abg: rgba(192,74,40,0.06);
-  --color-abr: rgba(192,74,40,0.28);
-  --color-nemo: #E8621A;
-  --color-bd: rgba(22,21,14,0.1);
-  --color-bd2: rgba(22,21,14,0.18);
-  --color-card: rgba(254,252,248,0.9);
-  --color-ltgrn: #D4EDDA;
-  --color-grn: #2A6241;
-  --color-blkgrn: #76D09A;
-  --color-sectext: rgba(192,74,40,0.045);
+  --text-body-lg: 18px;
+  --text-body: 16px;
+  --text-small: 14px;
+  --text-caption: 12px;
+  --text-chip: 11px;
 
-  --animate-cursor-blink: cursor-blink 1s step-end infinite ;
+  /* =========================
+     Radius
+  ========================= */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* =========================
+     Spacing
+  ========================= */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* =========================
+     Layout
+  ========================= */
+
+  --container-width: 1200px;
+  --hero-height: 720px;
+  --navbar-height: 72px;
+
+  /* =========================
+     Animation
+  ========================= */
+
+  --animate-cursor-blink: cursor-blink 1s step-end infinite;
 }
 
 @keyframes cursor-blink {
@@ -90,11 +120,51 @@
 }
 
 :root {
+  --bg: #FAFBFC;
+
+  --surface: #FFFFFF;
+
+  --surface-hover: #F5F7FA;
+
+  --text-primary: #101828;
+
+  --text-secondary: #667085;
+
+  --border: #E5E7EB;
+
+  --accent: #0F6FFF;
+
+  --accent-orange: #F97316;
+
+  --success: #16A34A;
+
+
   background: #F5F0E8;
 
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+}
+
+.dark {
+
+  --bg: #08111A;
+
+  --surface: #101827;
+
+  --surface-hover: #162132;
+
+  --text-primary: #F8FAFC;
+
+  --text-secondary: #94A3B8;
+
+  --border: #263244;
+
+  --accent: #4EA8FF;
+
+  --accent-orange: #FF8A3D;
+
+  --success: #4ADE80;
 }
 
 /* @media (prefers-color-scheme: dark) {
