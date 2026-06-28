@@ -1,4 +1,4 @@
-import Clock from '../Components/Clock';
+// import Clock from '../Components/Clock';
 
 export default function Hero() {
 

@@ -7,8 +7,8 @@ import { Routes, Route } from 'react-router-dom'
 // import Projects from './Sections/Projects'
 // import Journey from './Sections/Journey'
 // import Connect from './Sections/Connect'
-import ProjectsPage from './Pages/ProjectsPage'
-import CertificatesPage from './Pages/Certificates'
+// import ProjectsPage from './Pages/ProjectsPage'
+// import CertificatesPage from './Pages/Certificates'
 import WIP from './Pages/WIP'
 
 function HomePage() {
@@ -32,8 +32,8 @@ export default function App() {
         {/* <Nav /> */}
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/certificates" element={<CertificatesPage />} />
+          {/* <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/certificates" element={<CertificatesPage />} /> */}
         </Routes>
       </>
 
