@@ -13,6 +13,13 @@ export interface Certificate {
   url: string
 }
 
+export interface JourneyItem {
+  year: string;
+  title: string;
+  subtitle: string;
+  description: string;
+}
+
 export const projects: Project[] = [
   {
     name: 'Lore of Legends',
@@ -63,3 +70,37 @@ export const certificates: Certificate[] = [
     url: 'https://www.coursera.org/account/accomplishments/verify/MIOS4AP9U8C6',
   },
 ]
+
+
+
+export const journeys: JourneyItem[] = [
+  {
+    year: "2025 – Present",
+    title: "Software Test Engineer",
+    subtitle: "East West Banking Corporation",
+    description:
+      "Leading performance testing and test automation for enterprise banking systems using JMeter, Katalon Studio, Groovy, and Bash. Designing scalable test plans, API load tests, and automation scripts to improve testing efficiency.",
+  },
+  {
+    year: "2021 – 2025",
+    title: "BS Computer Science",
+    subtitle: "Our Lady of Fatima University",
+    description:
+      "Graduated with a Bachelor of Science in Computer Science. Dean's Lister (2023) with a strong foundation in software engineering, algorithms, and web development.",
+  },
+  {
+    year: "2025",
+    title: "Software QA Tester",
+    subtitle: "East West Banking Corporation",
+    description:
+      "Performed functional testing, defect reporting, and quality assurance for enterprise banking applications, ensuring software reliability before production releases.",
+  },
+  {
+    year: "2024 – 2025",
+    title: "4th-Year Representative",
+    subtitle: "Junior Philippine Computer Society (JPCS)",
+    description:
+      "Coordinated student events, managed logistics and booth operations, and designed promotional materials to increase engagement in computing-related activities.",
+  }
+
+];

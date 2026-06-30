@@ -6,9 +6,9 @@ export default function ProjectsPage() {
             {projects.map((p, index) => {
                 const isComingSoon = p.url === "#"
                 return (
-                <a key={p.url} href={p.url} target="_blank" className={`${isComingSoon ? "opacity-40" : ""} flex flex-col justify-between p-3 bg-card border-[0.5px] border-bd`}>
+                <a key={p.url} href={p.url} target="_blank" className={`${isComingSoon ? "opacity-40" : ""} flex flex-col justify-between p-3 bg-surface border-[0.5px] border-border`}>
                     <div className="flex justify-between items-center">
-                        <span className="font-dm-mono text-xxs text-sub mb-1">
+                        <span className="font-mono text-xxs text-text-secondary mb-1">
                             {/* Print the Index of the project as number and add "0" at the start if it's less than 10 */}
                             [ {isComingSoon ? "??" : String(index + 1).padStart(2, "0")} ]
                         </span>
@@ -18,19 +18,19 @@ export default function ProjectsPage() {
                     {/* Project Content */}
                     <div className="flex flex-col items-start justify-between h-full">
                         {/* Project Name */}
-                        <h3 className="font-dmserif text-base text-ink">{p.name}</h3>
+                        <h3 className="font-serif text-base text-text-primary">{p.name}</h3>
                         {/* Project Description */}
-                        <p className="mb-2 font-syne leading-normal text-left text-xs text-muted">{p.desc}</p>
+                        <p className="mb-2 font-heading leading-normal text-left text-xs text-text-secondary">{p.desc}</p>
                         
                         {/* Stack */}
                         <div className="flex gap-1.5">
                             {p.stack.map((tech) =>
-                                <div key={tech} className="text-acc font-dm-mono bg-abg border-[0.5px] border-abr px-1.5 py-0.5 text-xxs">{tech}</div>
+                                <div key={tech} className="text-acc font-mono bg-abg border-[0.5px] border-abr px-1.5 py-0.5 text-xxs">{tech}</div>
                             )}
                         </div>
 
                         {/* Link */}
-                        <a href={p.url} target="_blank" className="font-dm-mono text-xxs mt-1.5 text-sub">{isComingSoon ? "" : p.url}</a>
+                        <a href={p.url} target="_blank" className="font-mono text-xxs mt-1.5 text-text-secondary">{isComingSoon ? "" : p.url}</a>
 
                         <div></div>
                     </div>

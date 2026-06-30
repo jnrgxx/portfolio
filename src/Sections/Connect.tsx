@@ -1,8 +1,8 @@
 export default function Connect() {
 
     return (
-        <section id="connect" className="overflow-hidden relative flex flex-col  border border-bd bg-cr p-section-pad">
-             <div className="mb-5 tracking-wider border-[0.5px] border-acc py-[5px] px-[10px] flex gap-4 font-dm-mono text-xxs text-muted bg-abg">
+        <section id="connect" className="overflow-hidden relative flex flex-col  border border-border bg-bg p-section-pad">
+             <div className="mb-5 tracking-wider border-[0.5px] border-acc py-[5px] px-[10px] flex gap-4 font-mono text-xxs text-text-secondary bg-abg">
                 <p className="text-acc font-med">[ 05 ]</p>
                 <span className="text-acc">::</span>
                 establish connection
@@ -11,30 +11,30 @@ export default function Connect() {
              <div className="">
                 <div className="flex gap-12 items-center w-full mb-7">
                     <div className="flex flex-col items-start w-3/6 tracking-wide">
-                        <h1 className="font-dmserif font-bold text-3xl tracking-tight text-ink mb-2.5">
+                        <h1 className="font-serif font-bold text-3xl tracking-tight text-text-primary mb-2.5">
                             Got something
                             <em className="text-acc"> interesting?</em>
                         </h1>
                         
-                        <p className="text-left text-muted text-xs w-9/12">
+                        <p className="text-left text-text-secondary text-xs w-9/12">
                             Open to work opportunities, project collabs, or just a good conversation. Let's build something worth keeping.
                         </p>
                     </div>
 
                     <div className="flex flex-col items-start">
-                        <span className="font-dm-mono text-xxs text-sub mb-2">[ quick contact ]</span>
+                        <span className="font-mono text-xxs text-text-secondary mb-2">[ quick contact ]</span>
 
-                        <div className="bg-ink py-2 px-4 text-cr font-dm-mono text-xxs">jrogeet@gmail.com</div>
+                        <div className="bg-text-primary py-2 px-4 text-bg font-mono text-xxs">jrogeet@gmail.com</div>
                     </div>
                 </div>
 
-                <div className="border-t-[0.5px] border-bd pt-4 mb-4 grid grid-cols-3 w-full gap-3.5">
+                <div className="border-t-[0.5px] border-border pt-4 mb-4 grid grid-cols-3 w-full gap-3.5">
                     <div className="flex flex-col items-start ">
-                        <div className="font-dm-mono text-xxs text-sub mb-2">
+                        <div className="font-mono text-xxs text-text-secondary mb-2">
                             [ member of ]
                         </div>
 
-                        <div className="font-dm-mono text-xs text-left w-full">
+                        <div className="font-mono text-xs text-left w-full">
                             <a href="https://philippinecomputersociety.org/jpcs-2/" target="_blank" className="py-1.5 flex justify-between flex gap-1.5">
                                 <span className="text-acc">↗</span>
                                 Junior Philippine Computer Society (JPCS)
@@ -44,16 +44,16 @@ export default function Connect() {
                     </div>
 
                     <div className="flex flex-col items-start ">
-                        <div className="font-dm-mono text-xxs text-sub mb-2">
+                        <div className="font-mono text-xxs text-text-secondary mb-2">
                             [ social links ]
                         </div>
 
-                        <div className="font-dm-mono text-xs text-left w-full">
-                            <a href="https://www.linkedin.com/in/jrogeet/" target="_blank" className="border-b-[0.5px] border-bd py-1.5 flex justify-between">
+                        <div className="font-mono text-xs text-left w-full">
+                            <a href="https://www.linkedin.com/in/jrogeet/" target="_blank" className="border-b-[0.5px] border-border py-1.5 flex justify-between">
                                 LinkedIn
                                 <span className="text-acc">↗</span>
                             </a>
-                            <a href="https://github.com/jnrgxx" target="_blank" className="border-b-[0.5px] border-bd py-1.5 flex justify-between">
+                            <a href="https://github.com/jnrgxx" target="_blank" className="border-b-[0.5px] border-border py-1.5 flex justify-between">
                                 GitHub
                                 <span className="text-acc">↗</span>
                             </a>
@@ -65,38 +65,38 @@ export default function Connect() {
                     </div>
 
                     <div className="flex flex-col items-start ">
-                        <div className="font-dm-mono text-xxs text-sub mb-3">
+                        <div className="font-mono text-xxs text-text-secondary mb-3">
                             [ contact ]
                         </div>
 
-                        <div className="font-dm-mono text-xs text-left w-full">
-                            <a href="mailto:jrogeet@gmail.com" target="_blank" className="border-b-[0.5px] border-bd py-1.5 flex justify-between">
+                        <div className="font-mono text-xs text-left w-full">
+                            <a href="mailto:jrogeet@gmail.com" target="_blank" className="border-b-[0.5px] border-border py-1.5 flex justify-between">
                                 <div className="">
                                     <span>✉ email</span>
-                                    <p className="text-xxs text-muted">jrogeet@gmail.com</p>
+                                    <p className="text-xxs text-text-secondary">jrogeet@gmail.com</p>
                                 </div>
-                                <span className="text-sub font-dm-mono">&gt;</span>
+                                <span className="text-text-secondary font-mono">&gt;</span>
                             </a>
-                            <a href="/John-Rogee-Turqueza-Resume.pdf" target="_blank" className="border-b-[0.5px] border-bd py-1.5 flex justify-between">
+                            <a href="/John-Rogee-Turqueza-Resume.pdf" target="_blank" className="border-b-[0.5px] border-border py-1.5 flex justify-between">
                                 <div className="">
                                     <span>📄 resume</span>
-                                    <p className="text-xxs text-muted">download pdf</p>
+                                    <p className="text-xxs text-text-secondary">download pdf</p>
                                 </div>
-                                <span className="text-sub font-dm-mono">&gt;</span>
+                                <span className="text-text-secondary font-mono">&gt;</span>
                             </a>
                             <a href="#" target="_blank" className=" py-1.5 flex justify-between">
                                 <div className="">
                                     <span>📝 blog</span>
-                                    <p className="text-xxs text-muted">read my thoughts</p>
+                                    <p className="text-xxs text-text-secondary">read my thoughts</p>
                                 </div>
-                                <span className="text-sub font-dm-mono">&gt;</span>
+                                <span className="text-text-secondary font-mono">&gt;</span>
                             </a>
                         </div>
                     </div>
 
                 </div>
 
-                <div className="border-t-[0.5px] pt-4 border-bd w-full flex items-start font-dm-mono text-xxs text-sub">
+                <div className="border-t-[0.5px] pt-4 border-border w-full flex items-start font-mono text-xxs text-text-secondary">
                     <div className="">© 2026 [ john rogee turqueza ]</div>
                 </div>
                 

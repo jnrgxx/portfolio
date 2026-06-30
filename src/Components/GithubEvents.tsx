@@ -74,17 +74,17 @@ const GithubUserEvents = ({ username }: GithubUserEventsProps) => {
 }, [username]);
 
 return (
-  <div className="w-[90%] max-h-24 flex flex-col p-3 gap-1 bg-card relative overflow-hidden">
+  <div className="w-[90%] max-h-24 flex flex-col p-3 gap-1 bg-surface relative overflow-hidden">
 
     {events.length > 0 ? (
       events.map(event => (
-        <div key={event.id} className="flex flex-col items-start font-dm-mono">
-          <p className="text-xxs text-sub mb-2">[ github ] :: latest activity</p>
+        <div key={event.id} className="flex flex-col items-start font-mono">
+          <p className="text-xxs text-text-secondary mb-2">[ github ] :: latest activity</p>
 
-          <p className="text-xxs text-start font-medium text-ink">{event.message}</p>
+          <p className="text-xxs text-start font-medium text-text-primary">{event.message}</p>
 
           <div className="absolute bottom-1 right-1 flex justify-between">
-            <span className="text-xxs text-muted">{event.date}</span>
+            <span className="text-xxs text-text-secondary">{event.date}</span>
           </div>
 
           <img src="GitHub_Invertocat_Black.svg" className="z-0 absolute h-full opacity-10 -right-8 top-0" />

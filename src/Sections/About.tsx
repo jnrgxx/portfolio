@@ -19,8 +19,8 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="overflow-hidden relative flex flex-col min-h-hero-height border border-bd bg-cr p-section-pad">
-             <div className="tracking-wider border-[0.5px] border-acc py-[5px] px-[10px] mb-5 flex gap-4 font-dm-mono text-xxs text-muted bg-abg">
+        <section id="about" className="overflow-hidden relative flex flex-col min-h-hero-height border border-border bg-bg p-section-pad">
+             <div className="tracking-wider border-[0.5px] border-acc py-[5px] px-[10px] mb-5 flex gap-4 font-mono text-xxs text-text-secondary bg-abg">
                 <p className="text-acc font-med">[ 02 ]</p>
                 <span className="text-acc">::</span>
                 cat about.md
@@ -30,15 +30,15 @@ export default function About() {
              <div className="flex justify-between">
                 {/* Left */}
                 <div className="w-[70%] flex flex-col items-start">
-                    <h2 className="font-dmserif text-section-heading leading-tight mb-3 font-bold tracking-tight">
+                    <h2 className="font-serif text-h2 leading-tight mb-3 font-bold tracking-tight">
                         Built from <span className="italic text-acc">curiosity.</span> Refined through learning.
                     </h2>
 
-                    <p className="text-muted text-sm font-syne text-left mb-5">
+                    <p className="text-text-secondary text-sm font-heading text-left mb-5">
                     I’m a CS graduate passionate about programming, design, and building software that’s both functional and enjoyable to use.
                     </p>
 
-                    <div className="w-full border-t-[0.5px] border-bd pt-3.5">
+                    <div className="w-full border-t-[0.5px] border-border pt-3.5">
                         <Stack arr={techStack} />
 
                         <div className="">
@@ -49,22 +49,22 @@ export default function About() {
 
                 <div className="w-[30%] p-4 flex flex-col items-end">
 
-                    <div className="w-[90%] mb-2 flex flex-col items-start p-4 bg-ink text-cr font-dm-mono text-xxs">
-                        <div className="text-base text-cr/30 mb-1">&gt;_</div>
+                    <div className="w-[90%] mb-2 flex flex-col items-start p-4 bg-text-primary text-bg font-mono text-xxs">
+                        <div className="text-base text-bg/30 mb-1">&gt;_</div>
                         <div className="text-sm mb-1">[ rogee.archive ]</div>
-                        <span className="text-xxs text-cr/30 mb-4 text-opacity-30">PORTFOLIO CARD :: v2.0</span>
+                        <span className="text-xxs text-bg/30 mb-4 text-opacity-30">PORTFOLIO CARD :: v2.0</span>
                     
-                        <div className="text-cr/30">ROLE</div>
+                        <div className="text-bg/30">ROLE</div>
                         <span className="text-xs mb-4">Test Engineer · Developer</span>
 
 
-                        <div className="text-cr/30">STATUS</div>
+                        <div className="text-bg/30">STATUS</div>
                         <div className="text-blkgrn text-xs mb-4">Open for work ●</div>
 
-                        <div className="text-cr/30">LOCATION</div>
+                        <div className="text-bg/30">LOCATION</div>
                         <div className="">Manila, PH 🇵🇭</div>
 
-                        {/* <div className="text-cr/30">CERTS</div>
+                        {/* <div className="text-bg/30">CERTS</div>
                         <div className="mb-4"></div> */}
                     </div>
 

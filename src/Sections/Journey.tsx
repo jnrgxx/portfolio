@@ -1,96 +1,82 @@
-interface JourneyStructure {
-    date: string,
-    role: string,
-    company: string,
-    type: string,
-}
+import { useState } from "react";
+import JourneyCard from "../Components/JourneyCard";
+import { journeys } from "../data/portfolioData";
 
-const journeys: JourneyStructure[] = [
-    {date: "2025 - Present", role: "Test Engineer", company: "East West Banking Corporation", type: "WORK"},
-    {date: "2025", role: "QA Intern", company: "East West Banking Corporation", type: "INTERNSHIP"},
-    {date: "2021 - 2025", role: "BS Computer Science", company: "Our Lady of Fatima University", type: "EDU"},
-    {date: "2025", role: "CCST Cybersecurity", company: "Cisco · Certiport", type: "CERT"},
-    {date: "2024 - 2025", role: "4th Year Representative", company: "Junior Philippine Computer Society", type: "ORG"},
-    {date: "2023", role: "Dean Lister", company: "Our Lady of Fatima University", type: "EDU"},
-]
+export default function Journey() { 
 
-export default function Journey() {
+    const [page, setPage] = useState(0);
+
+    const ITEMS_PER_PAGE = 4;
+
+    const pages = [];
+
+    for (let i = 0; i < journeys.length; i += ITEMS_PER_PAGE) {
+        pages.push(journeys.slice(i, i + ITEMS_PER_PAGE));
+    }
+
+    const maxPage = pages.length - 1;
 
     return (
-        <section id="journey" className="overflow-hidden relative flex flex-col h-auto border border-bd bg-cr p-section-pad">
-             <div className="mb-5 tracking-wider border-[0.5px] border-acc py-[5px] px-[10px] flex gap-4 font-dm-mono text-xxs text-muted bg-abg">
-                <p className="text-acc font-med">[ 04 ]</p>
-                <span className="text-acc">::</span>
-                git log --oneline
-             </div>
+      <>
+            {/* HEADER */}
+            <div className="flex justify-between items-center mb-8">
 
-             <div className="w-full flex relative ">
-                <div className="w-4/6 flex flex-col gap-4 items-start">
-                    {/* Header */}
-                    <h1 className="font-dmserif tracking-tight text-3xl">
-                        Journey
-                        <em className="text-acc"> So Far</em>
-                    </h1>
+                <h2 className="font-mono">
+                    &gt; journey
+                    <span className="text-zinc-400">
+                        {" "}---experience
+                    </span>
+                </h2>
 
-                    {/* Left */}
-                    <div className="bg-red flex justify-start">
-                        {/* Main Content */}
-                        <div className="h-auto min-h-fit flex gap-4">
-                            <div className="w-px h-full bg-bd"></div>
+                <div className="flex">
 
-                            <div className="flex flex-col gap-5 items-start">
+                    <button
+                        onClick={() => setPage(Math.max(page - 1, 0))}
+                        className="border px-3 py-2"
+                    >
+                        ←
+                    </button>
 
-                                {journeys.map((j, index) => 
-                                    <div key={index} className="flex">
-                                        <div className={`h-2 w-2 absolute -left-1  ${index === 0 ? "bg-acc" : "bg-cr border-[0.5px] border-sub"}`}  ></div>
-                                        <div className="flex flex-col items-start gap-0.5">
-                                            <span className="font-dm-mono text-acc text-xs">{j.date}</span>
-                                            <p className="text-sm">{j.role}</p>
-                                            <p className="font-dm-mono text-muted text-xs">{j.company}</p>
-                                            <p className=
-                                                {`
-                                                    bg-acc/5 opacity-80 py-0.5 px-1 font-dm-mono text-xxs inline-block border-[0.5px]
-                                                    ${
-                                                        j.type === "ORG" ? "text-[#8B7355] border-[#8B7355]/60" 
-                                                        : j.type === "CERT" ? "text-[#2A6241] border-[#2A6241]/60" 
-                                                        : j.type === "EDU" ? "text-[#185FA5] border-[#185FA5]/60" 
-                                                        : "text-acc  border-acc/60"
-                                                    }
-                                                `}
-                                                >
-                                                    {j.type}
-                                            </p>
-                                        </div>
-                                    </div>
-                                )}
+                    <button
+                        onClick={() => setPage(Math.min(page + 1, maxPage))}
+                        className="border border-l-0 px-3 py-2"
+                    >
+                        →
+                    </button>
 
-                                    <div className="flex opacity-40">
-                                        <div className="h-2 w-2 absolute -left-1 bg-cr border-[0.5px] border-sub"></div>
-                                        <div className="flex flex-col items-start gap-0.5">
-                                            <span className="font-dm-mono text-acc text-xs">???</span>
-                                            <p className="text-sm">next chapter...</p>
-                                            <p className="font-dm-mono text-muted text-xs">something good is coming.</p>
-                                            <p className="bg-acc/5 font-dm-mono text-xxs inline-block text-acc border-[0.5px] border-acc/60 py-0.5 px-1">???</p>
-                                        </div>
-                                    </div>
+                </div>
 
+            </div>
 
-                            </div>
+            {/* TIMELINE */}
+            <div className="relative overflow-hidden">
 
+                {/* horizontal line */}
+                <div className="absolute top-1.5 left-0 w-full h-px bg-zinc-600" />
+
+                <div
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{
+                        transform: `translateX(-${page * 100}%)`,
+                    }}
+                >
+                    {pages.map((group, index) => (
+                        <div
+                            key={index}
+                            className="min-w-full flex justify-between"
+                        >
+                            {group.map((item) => (
+                                <JourneyCard
+                                    key={item.title}
+                                    item={item}
+                                />
+                            ))}
                         </div>
-                    </div>
+                    ))}
                 </div>
 
-                {/* Right */}
-                <div className="w-2/6">
+            </div>
+      </>
+    );
 
-                </div>
-             </div>
-
-
-
-             <div className="select-none font-descal absolute text-section-watermark -bottom-2 right-2 text-sectext">Journey</div>
-
-        </section>
-    )
 }
