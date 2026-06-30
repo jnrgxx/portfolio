@@ -1,29 +1,68 @@
+import { Link, useLocation } from 'react-router-dom'
+import { siteConfig } from '../data/siteConfig'
+
+const links = [
+  { label: 'home', href: '/' },
+  { label: 'projects', href: '/#projects' },
+  { label: 'journey', href: '/#journey' },
+  { label: 'about', href: '/#about' },
+  { label: 'skills', href: '/#skills' },
+  { label: 'contact', href: '/#contact' },
+] as const
+
 export default function Nav() {
-    const links = [
-        {label: "home", href: "/"},
-        {label: "projects", href: "/#projects"},
-        {label: "journey", href: "/#journey"},
-        {label: "about", href: "/#about"},
-        {label: "contact", href: "/#contact"}
-    ]
-    
-    return (
-        <header className="sticky top-0 z-50 bg-bg/55 backdrop-blur-md supports-[backdrop-filter]:bg-bg/45 shadow-[0_8px_24px_rgba(22,21,14,0.08)] border border-border flex items-center justify-between h-14 px-5">
-            <a href="/" className="flex font-mono text-sm items-center justify-between w-10">
-                <p className="font-bold text-acc">rogee</p>
-                <p className="text-text-secondary">@dev</p>
-                <p className="font-bold text-acc">:~$</p>
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
+
+  return (
+    <header className="sticky top-0 z-50 bg-bg/80 backdrop-blur-md border border-border rounded-md flex items-center justify-between gap-4 min-h-14 px-4 py-2">
+      <Link
+        to="/"
+        className="font-mono text-xs sm:text-sm no-underline text-text-primary shrink-0"
+        aria-label="Home"
+      >
+        <span className="text-terminal">{siteConfig.terminalPrompt}</span>
+        <span>:~$</span>
+      </Link>
+
+      <nav
+        className="hidden md:flex items-center gap-4 lg:gap-5 font-mono text-xs"
+        aria-label="Main navigation"
+      >
+        {links.map((link) => {
+          const isActive = isHome && link.label === 'home'
+          return (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`no-underline transition-colors hover:text-terminal ${
+                isActive ? 'text-terminal' : 'text-text-secondary'
+              }`}
+            >
+              _{link.label}
             </a>
+          )
+        })}
+      </nav>
 
-            <nav className="flex font-heading justify-between h-6 w-nav-width items-center">
+      <nav
+        className="flex md:hidden items-center gap-3 font-mono text-xxs overflow-x-auto"
+        aria-label="Main navigation"
+      >
+        {links.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="no-underline text-text-secondary hover:text-terminal whitespace-nowrap"
+          >
+            _{link.label}
+          </a>
+        ))}
+      </nav>
 
-                {links.map(l => 
-                    <a key={l.href} href={l.href} className="font-heading font-bold text-xs no-underline text-text-secondary">
-                        {l.label}
-                    </a>
-                )}
-
-            </nav>
-        </header>
-    )
+      <span className="hidden lg:inline font-mono text-terminal text-sm" aria-hidden="true">
+        &gt;_
+      </span>
+    </header>
+  )
 }

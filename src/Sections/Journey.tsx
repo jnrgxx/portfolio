@@ -1,82 +1,69 @@
-import { useState } from "react";
-import JourneyCard from "../Components/JourneyCard";
-import { journeys } from "../data/portfolioData";
+import { useMemo, useState } from 'react'
+import JourneyCard from '../Components/JourneyCard'
+import SectionHeader from '../Components/SectionHeader'
+import { journeys } from '../data/portfolioData'
 
-export default function Journey() { 
+const ITEMS_PER_PAGE = 4
 
-    const [page, setPage] = useState(0);
+export default function Journey() {
+  const [page, setPage] = useState(0)
 
-    const ITEMS_PER_PAGE = 4;
-
-    const pages = [];
-
+  const pages = useMemo(() => {
+    const result: typeof journeys[] = []
     for (let i = 0; i < journeys.length; i += ITEMS_PER_PAGE) {
-        pages.push(journeys.slice(i, i + ITEMS_PER_PAGE));
+      result.push(journeys.slice(i, i + ITEMS_PER_PAGE))
     }
+    return result
+  }, [])
 
-    const maxPage = pages.length - 1;
+  const maxPage = pages.length - 1
 
-    return (
-      <>
-            {/* HEADER */}
-            <div className="flex justify-between items-center mb-8">
+  return (
+    <section id="journey" aria-labelledby="journey-heading" className="section-shell p-4 font-mono">
+      <SectionHeader
+        id="journey-heading"
+        command="journey"
+        flag="--experience"
+        action={
+          <div className="flex" role="group" aria-label="Timeline pagination">
+            <button
+              type="button"
+              onClick={() => setPage(Math.max(page - 1, 0))}
+              disabled={page === 0}
+              aria-label="Previous page"
+              className="border border-border px-3 py-1.5 text-text-secondary hover:text-text-primary hover:border-accent disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer bg-transparent transition-colors"
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              onClick={() => setPage(Math.min(page + 1, maxPage))}
+              disabled={page === maxPage}
+              aria-label="Next page"
+              className="border border-border border-l-0 px-3 py-1.5 text-text-secondary hover:text-text-primary hover:border-accent disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer bg-transparent transition-colors"
+            >
+              →
+            </button>
+          </div>
+        }
+      />
 
-                <h2 className="font-mono">
-                    &gt; journey
-                    <span className="text-zinc-400">
-                        {" "}---experience
-                    </span>
-                </h2>
+      <div className="relative overflow-hidden mt-4 pt-2">
+        <div className="absolute top-[18px] left-0 w-full h-px bg-border-subtle" aria-hidden="true" />
 
-                <div className="flex">
-
-                    <button
-                        onClick={() => setPage(Math.max(page - 1, 0))}
-                        className="border px-3 py-2"
-                    >
-                        ←
-                    </button>
-
-                    <button
-                        onClick={() => setPage(Math.min(page + 1, maxPage))}
-                        className="border border-l-0 px-3 py-2"
-                    >
-                        →
-                    </button>
-
-                </div>
-
+        <div
+          className="flex motion-safe:transition-transform motion-safe:duration-500 ease-in-out"
+          style={{ transform: `translateX(-${page * 100}%)` }}
+        >
+          {pages.map((group, index) => (
+            <div key={index} className="min-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-1">
+              {group.map((item) => (
+                <JourneyCard key={`${item.title}-${item.year}`} item={item} />
+              ))}
             </div>
-
-            {/* TIMELINE */}
-            <div className="relative overflow-hidden">
-
-                {/* horizontal line */}
-                <div className="absolute top-1.5 left-0 w-full h-px bg-zinc-600" />
-
-                <div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{
-                        transform: `translateX(-${page * 100}%)`,
-                    }}
-                >
-                    {pages.map((group, index) => (
-                        <div
-                            key={index}
-                            className="min-w-full flex justify-between"
-                        >
-                            {group.map((item) => (
-                                <JourneyCard
-                                    key={item.title}
-                                    item={item}
-                                />
-                            ))}
-                        </div>
-                    ))}
-                </div>
-
-            </div>
-      </>
-    );
-
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }

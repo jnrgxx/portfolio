@@ -1,41 +1,45 @@
-//import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Nav from './Components/Nav'
+import Footer from './Components/Footer'
 import Hero from './Sections/Hero'
 import Snapshot from './Sections/Snapshot'
 import Projects from './Sections/Projects'
 import Journey from './Sections/Journey'
+import TechStack from './Sections/TechStack'
+import AboutMe from './Sections/AboutMe'
+import ContactSection from './Sections/ContactSection'
 import ProjectsPage from './Pages/ProjectsPage'
 import CertificatesPage from './Pages/Certificates'
-import WIP from './Pages/WIP'
 
 function HomePage() {
   return (
-    <div className="flex flex-col gap-2">
-        <Hero />
-        <Snapshot />
-        <Projects />
-        <Journey />
-        <WIP />
-        {/* 
-        
-        <About />
-        <Connect /> */}
-
-    </div>
+    <main id="main-content" className="flex flex-col gap-3">
+      <Hero />
+      <Snapshot />
+      <Projects />
+      <Journey />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
+        <TechStack />
+        <AboutMe />
+        <ContactSection />
+      </div>
+      <Footer />
+    </main>
   )
 }
 
 export default function App() {
   return (
-      <>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/certificates" element={<CertificatesPage />} />
-        </Routes>
-      </>
-
+    <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/certificates" element={<CertificatesPage />} />
+      </Routes>
+    </>
   )
 }
