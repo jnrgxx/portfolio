@@ -1,4 +1,4 @@
-import { certificates, projects } from '../data/portfolioData'
+// import { certificates, projects } from '../data/portfolioData'
 
 export default function Projects() {
 
