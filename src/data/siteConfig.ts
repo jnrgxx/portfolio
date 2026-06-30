@@ -1,5 +1,5 @@
 export const siteConfig = {
-  terminalPrompt: 'john@nemodev',
+  terminalPrompt: 'rogee@archive',
   name: 'John Rogee Turqueza',
   nickname: "aka 'Nemo'",
   title: 'Junior Software Engineer',

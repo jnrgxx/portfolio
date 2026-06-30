@@ -17,7 +17,7 @@ export default function Snapshot() {
       <SectionHeader command="snapshot" flag="--status" />
 
       <div className="overflow-x-auto border-t border-border">
-        <div className="flex min-w-[640px] divide-x divide-border px-4 py-4 gap-0">
+        <div className="flex min-w-[640px] divide-x divide-border justify-evenly px-4 py-4">
           <div className="flex flex-col items-start gap-2 pr-6 min-w-[120px]">
             <span id="snapshot-heading" className="text-xxs text-text-muted uppercase tracking-wider">
               Role

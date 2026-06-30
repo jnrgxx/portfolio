@@ -8,10 +8,10 @@ export default function TechStack() {
   const skills = expanded ? allSkills : topSkills
 
   return (
-    <section id="skills" aria-labelledby="skills-heading" className="section-shell p-4 font-mono text-left h-full">
+    <section id="skills" aria-labelledby="skills-heading" className="section-shell p-1 font-mono text-left h-full">
       <SectionHeader id="skills-heading" command="tech_stack" flag="(top skills)" />
 
-      <div className="flex flex-wrap gap-2 px-4 pb-2">
+      <div className="flex flex-wrap gap-2 px-4 py-2">
         {skills.map((skill) => (
           <TechChip key={skill} label={skill} />
         ))}

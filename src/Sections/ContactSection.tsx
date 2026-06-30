@@ -31,10 +31,10 @@ const contactLinks = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="section-shell p-4 font-mono text-left h-full">
+    <section id="contact" aria-labelledby="contact-heading" className="section-shell p-1 font-mono text-left h-full">
       <SectionHeader id="contact-heading" command="contact" />
 
-      <ul className="px-4 pb-2 space-y-3 m-0 list-none">
+      <ul className="px-4 pb-7 space-y-3 m-0 list-none">
         {contactLinks.map((item) => (
           <li key={item.label}>
             {item.href ? (
@@ -50,7 +50,7 @@ export default function ContactSection() {
                 </span>
                 <span>
                   <span className="block text-xxs text-text-muted">{item.label}</span>
-                  <span className="text-text-primary">{item.value}</span>
+                  <span className="text-text-primary text-xs">{item.value}</span>
                 </span>
               </ExternalLink>
             ) : (
@@ -63,7 +63,7 @@ export default function ContactSection() {
                 </span>
                 <span>
                   <span className="block text-xxs text-text-muted">{item.label}</span>
-                  <span className="text-text-primary">{item.value}</span>
+                  <span className="text-text-primary text-xs">{item.value}</span>
                 </span>
               </div>
             )}

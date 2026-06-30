@@ -10,7 +10,7 @@ interface SectionHeaderProps {
 
 export default function SectionHeader({ command, flag, action, className = '', id }: SectionHeaderProps) {
   return (
-    <div className={`flex items-center justify-between gap-4 px-4 pt-4 pb-2 ${className}`}>
+    <div className={`flex items-center justify-between gap-4 px-4 pt-2 pb-3 ${className}`}>
       <h2 id={id} className="font-mono text-sm m-0">
         <span className="text-terminal">&gt; {command}</span>
         {flag && <span className="text-text-secondary"> {flag}</span>}

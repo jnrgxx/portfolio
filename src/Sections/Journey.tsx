@@ -19,7 +19,7 @@ export default function Journey() {
   const maxPage = pages.length - 1
 
   return (
-    <section id="journey" aria-labelledby="journey-heading" className="section-shell p-4 font-mono">
+    <section id="journey" aria-labelledby="journey-heading" className="section-shell pb-3 font-mono">
       <SectionHeader
         id="journey-heading"
         command="journey"
@@ -48,8 +48,8 @@ export default function Journey() {
         }
       />
 
-      <div className="relative overflow-hidden mt-4 pt-2">
-        <div className="absolute top-[18px] left-0 w-full h-px bg-border-subtle" aria-hidden="true" />
+      <div className="relative overflow-hidden pt-4 px-4 border-t border-border">
+        <div className="absolute top-[26px] left-0 w-full h-px bg-border-subtle" aria-hidden="true" />
 
         <div
           className="flex motion-safe:transition-transform motion-safe:duration-500 ease-in-out"
