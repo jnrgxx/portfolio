@@ -1,5 +1,4 @@
 import type { JourneyItem } from "../data/portfolioData";
-import { journeys } from "../data/portfolioData";
 
 interface Props {
     item: JourneyItem;
