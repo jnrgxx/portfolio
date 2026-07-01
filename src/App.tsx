@@ -1,10 +1,11 @@
-import { useState, useCallback } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { useState, useCallback, useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { ThemeProvider } from './hooks/useTheme'
 import Nav from './Components/Nav'
 import Footer from './Components/Footer'
 import Hero from './Sections/Hero'
 import LoadingScreen from './Components/LoadingScreen'
+import useSectionHighlight from './hooks/useSectionHighlight'
 import Snapshot from './Sections/Snapshot'
 import Projects from './Sections/Projects'
 import Journey from './Sections/Journey'
@@ -16,6 +17,7 @@ import ProjectsPage from './Pages/ProjectsPage'
 import CertificatesPage from './Pages/Certificates'
 
 function HomePage() {
+  useSectionHighlight()
   return (
     <main id="main-content" className="flex flex-col gap-3 flex-1">
       <Hero />

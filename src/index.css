@@ -96,6 +96,7 @@
 
   --animate-cursor-blink: cursor-blink 1s step-end infinite;
   --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
+  --animate-section-highlight: section-highlight 0.8s ease-out forwards;
 }
 
 @keyframes cursor-blink {
@@ -106,6 +107,32 @@
 @keyframes pulse-soft {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.6; transform: scale(0.92); }
+}
+
+@keyframes section-highlight {
+  0% {
+    border-color: var(--color-accent);
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-2px);
+  }
+  30% {
+    transform: translateX(2px);
+  }
+  45% {
+    transform: translateX(-1px);
+  }
+  60% {
+    transform: translateX(1px);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 12px 2px color-mix(in oklab, var(--color-accent) 25%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+    border-color: var(--color-border);
+    transform: translateX(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -194,11 +221,19 @@ button:focus-visible {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
+
+
 
 .bubble {
   position: absolute;
   border-radius: 50%;
   border: 1px solid rgba(56, 189, 248, 0.25);
   background: radial-gradient(circle at 30% 30%, rgba(56, 189, 248, 0.15), transparent 70%);
+}
+
+/* Section hash-highlight animation */
+.section-target {
+  animation: section-highlight 0.8s ease-out forwards;
 }
