@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { siteConfig } from '../data/siteConfig'
+import ThemeToggle from './ThemeToggle'
 
 const links = [
   { label: 'home', href: '/' },
@@ -60,9 +61,7 @@ export default function Nav() {
         ))}
       </nav>
 
-      <span className="hidden lg:inline font-mono text-terminal text-sm" aria-hidden="true">
-        &gt;_
-      </span>
+      <ThemeToggle />
     </header>
   )
 }

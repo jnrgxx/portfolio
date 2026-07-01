@@ -43,6 +43,7 @@
   --font-mono: "Geist Mono", "DM Mono", monospace;
   --font-serif: "DM Serif", serif;
 
+  /* DARK theme base (default) */
   --color-bg: #01080e;
   --color-surface: #0a1420;
   --color-surface-elevated: #0f1a2a;
@@ -117,6 +118,29 @@
 
 :root {
   color-scheme: dark;
+  background: var(--color-bg);
+}
+
+/* ===== LIGHT THEME ===== */
+[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #F8F2E4;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFBF0;
+  --color-surface-hover: #FFF5E6;
+
+  --color-text-primary: #333333;
+  --color-text-secondary: #555555;
+  --color-text-muted: #888888;
+
+  --color-border: #E0D5C0;
+  --color-border-subtle: #EAE0CE;
+
+  --color-accent: #304D89;
+  --color-accent-orange: #F48F48;
+  --color-success: #AF3238;
+  --color-terminal: #333333;
+
   background: var(--color-bg);
 }
 

@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from './hooks/useTheme'
 import Nav from './Components/Nav'
 import Footer from './Components/Footer'
 import Hero from './Sections/Hero'
@@ -38,7 +39,7 @@ export default function App() {
   }, [])
 
   return (
-    <>
+    <ThemeProvider>
       {loading && <LoadingScreen onFinished={handleLoadingFinished} />}
       <div style={{ visibility: loading ? 'hidden' : 'visible' as const }}>
         <a href="#main-content" className="skip-link">
@@ -51,6 +52,6 @@ export default function App() {
           <Route path="/certificates" element={<CertificatesPage />} />
         </Routes>
       </div>
-    </>
+    </ThemeProvider>
   )
 }
