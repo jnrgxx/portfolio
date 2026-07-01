@@ -1,5 +1,5 @@
-import { useState, useCallback, useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { useState, useCallback } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './hooks/useTheme'
 import Nav from './Components/Nav'
 import Footer from './Components/Footer'
