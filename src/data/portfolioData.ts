@@ -78,6 +78,12 @@ export const certificates: Certificate[] = [
   },
 ]
 
+export const featuredCertificates: Certificate[] = (() => {
+  const verified = certificates.filter((c) => c.verified)
+  const unverified = certificates.filter((c) => !c.verified)
+  return [...verified, ...unverified].slice(0, 3)
+})()
+
 export const journeys: JourneyItem[] = [
   {
     year: '2025 – Present',

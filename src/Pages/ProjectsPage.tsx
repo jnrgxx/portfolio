@@ -56,7 +56,7 @@ function ProjectListItem({
 
 export default function ProjectsPage() {
   return (
-    <main id="main-content" className="py-4">
+    <main id="main-content" className="py-4 flex flex-col flex-1">
       <header className="mb-6 text-left">
         <p className="font-mono text-sm text-terminal m-0 mb-2">&gt; all_projects</p>
         <h1 className="font-heading text-2xl m-0">Projects</h1>
@@ -71,7 +71,9 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      <Footer />
+      <div className="mt-auto">
+        <Footer />
+      </div>
     </main>
   )
 }

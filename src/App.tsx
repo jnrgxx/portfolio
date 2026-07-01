@@ -8,6 +8,7 @@ import LoadingScreen from './Components/LoadingScreen'
 import Snapshot from './Sections/Snapshot'
 import Projects from './Sections/Projects'
 import Journey from './Sections/Journey'
+import Certificates from './Sections/Certificates'
 import TechStack from './Sections/TechStack'
 import AboutMe from './Sections/AboutMe'
 import ContactSection from './Sections/ContactSection'
@@ -16,11 +17,12 @@ import CertificatesPage from './Pages/Certificates'
 
 function HomePage() {
   return (
-    <main id="main-content" className="flex flex-col gap-3">
+    <main id="main-content" className="flex flex-col gap-3 flex-1">
       <Hero />
       <Snapshot />
       <Projects />
       <Journey />
+      <Certificates />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
         <TechStack />
         <AboutMe />
@@ -41,7 +43,7 @@ export default function App() {
   return (
     <ThemeProvider>
       {loading && <LoadingScreen onFinished={handleLoadingFinished} />}
-      <div style={{ visibility: loading ? 'hidden' : 'visible' as const }}>
+      <div style={{ visibility: loading ? 'hidden' : 'visible' as const }} className="min-h-screen flex flex-col">
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
