@@ -35,6 +35,13 @@ export const projects: Project[] = [
     desc: 'Interactive storytelling platform blending AI-powered narratives with user-driven choices to create personalized legend-like adventures.',
     stack: ['FastAPI', 'React', 'PostgreSQL', 'LangChain', 'TypeScript'],
     url: 'https://github.com/jnrgxx/lore-of-legends',
+    demoUrl: 'https://lore-of-legends-pi.vercel.app/'
+  },
+  {
+    name: 'AWS S3 Clone',
+    desc: 'Designed and developed an Amazon S3-inspired object storage service in Java and Spring Boot, implementing full CRUD operations for buckets and file objects through RESTful APIs following a 3-layer architecture (Controller, Service, Repository) with clear separation of concerns.',
+    stack: ['Java', 'SpringBoot', 'Spring Data JPA', 'PostgreSQL', 'Swagger/OpenAPI'],
+    url: 'https://github.com/jnrgxx/object-storage-service',
   },
   {
     name: 'Zealia',
