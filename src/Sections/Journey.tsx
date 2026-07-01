@@ -58,7 +58,11 @@ export default function Journey() {
           {pages.map((group, index) => (
             <div key={index} className="min-w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-1">
               {group.map((item) => (
-                <JourneyCard key={`${item.title}-${item.year}`} item={item} />
+                <JourneyCard
+                  key={`${item.title}-${item.year}`}
+                  item={item}
+                  isActive={item.year.includes('Present')}
+                />
               ))}
             </div>
           ))}

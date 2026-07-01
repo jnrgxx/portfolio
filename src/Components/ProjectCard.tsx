@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       )}
 
       <div className="flex items-center gap-2 min-w-0">
-        <img className="h-5 w-5 shrink-0" src="/programming.svg" alt="" aria-hidden="true" />
+        <img className="h-5 w-5 shrink-0" src="/programming-folder.svg" alt="" aria-hidden="true" />
         <h3 className="font-mono text-sm font-semibold text-terminal truncate m-0">{project.name}</h3>
       </div>
 
