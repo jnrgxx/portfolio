@@ -3,7 +3,7 @@ export const siteConfig = {
   name: 'John Rogee Turqueza',
   nickname: "aka 'Nemo'",
   title: 'Junior Software Engineer',
-  bio: 'Building backend applications with Java - Spring Boot, C# - .NET, ReactJS, and modern software engineering practices.',
+  bio: 'Building fullstack applications with Java - Spring Boot, C# - .NET, ReactJS, Python, and modern software engineering practices.',
   status: 'Available for Software Engineering opportunities',
   snapshotRole: 'Software Test Engineer',
   snapshotStatus: 'Open to Work',
