@@ -5,12 +5,13 @@ import Footer from '../Components/Footer'
 export default function CertificatesPage() {
   return (
     <main id="main-content" className="py-4 flex flex-col flex-1">
-      <header className="mb-6 text-left">
-        <p className="font-mono text-sm text-terminal m-0 mb-2">&gt; certificates</p>
-        <h1 className="font-heading text-2xl m-0">Certifications</h1>
-        <a href="/" className="font-mono text-xs text-accent no-underline hover:underline">
+      <header className="w-3/6 mb-6 flex items-center justify-between text-left">
+      <a href="/" className="font-mono text-xs text-accent no-underline hover:underline">
           ← back home
         </a>
+        {/* <p className="font-mono text-sm text-terminal m-0 mb-2">&gt; certificates</p> */}
+        <h1 className="font-heading text-2xl m-0">Certifications</h1>
+        
       </header>
 
       <div className="flex flex-col gap-2">
