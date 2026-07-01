@@ -1,7 +1,9 @@
+import { useState, useCallback } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Nav from './Components/Nav'
 import Footer from './Components/Footer'
 import Hero from './Sections/Hero'
+import LoadingScreen from './Components/LoadingScreen'
 import Snapshot from './Sections/Snapshot'
 import Projects from './Sections/Projects'
 import Journey from './Sections/Journey'
@@ -29,17 +31,26 @@ function HomePage() {
 }
 
 export default function App() {
+  const [loading, setLoading] = useState(true)
+
+  const handleLoadingFinished = useCallback(() => {
+    setLoading(false)
+  }, [])
+
   return (
     <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/certificates" element={<CertificatesPage />} />
-      </Routes>
+      {loading && <LoadingScreen onFinished={handleLoadingFinished} />}
+      <div style={{ visibility: loading ? 'hidden' : 'visible' as const }}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/certificates" element={<CertificatesPage />} />
+        </Routes>
+      </div>
     </>
   )
 }

@@ -84,7 +84,7 @@ export const journeys: JourneyItem[] = [
     title: 'Software Test Engineer',
     subtitle: 'East West Banking Corporation',
     description:
-      'Leading performance testing and test automation for enterprise banking systems using JMeter, Katalon Studio, Groovy, and Bash.',
+      'Leading performance testing projects and test automation for enterprise banking systems using JMeter, Katalon Studio, Groovy, and Bash.',
   },
   {
     year: '2021 – 2025',

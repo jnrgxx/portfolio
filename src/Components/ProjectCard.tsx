@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <h3 className="font-mono text-sm font-semibold text-terminal truncate m-0">{project.name}</h3>
       </div>
 
-      <p className="font-mono text-xxs text-text-muted m-0">{stackLabel}</p>
+      <p className="font-mono text-xs text-text-muted m-0">{stackLabel}</p>
 
       <p className="font-mono text-xs text-text-secondary leading-relaxed line-clamp-3 m-0 flex-1">
         {project.desc}
