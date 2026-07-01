@@ -57,12 +57,12 @@ function ProjectListItem({
 export default function ProjectsPage() {
   return (
     <main id="main-content" className="py-4 flex flex-col flex-1">
-      <header className="w-3/6 mb-6 flex items-center justify-between text-left">
-        <a href="/" className="font-mono text-xs text-accent no-underline hover:underline">
+      <header className="relative mb-6 flex items-center justify-center text-left">
+        <a href="/" className="absolute left-1 font-mono text-xs text-accent no-underline hover:underline">
           ← back home
         </a>
         {/* <p className="font-mono text-sm text-terminal m-0 mb-2">&gt; all_projects</p> */}
-        <h1 className="font-heading text-2xl m-0">Projects</h1>
+        <h1 className="font-heading text-center text-2xl m-0">Projects</h1>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full">

@@ -5,8 +5,8 @@ import Footer from '../Components/Footer'
 export default function CertificatesPage() {
   return (
     <main id="main-content" className="py-4 flex flex-col flex-1">
-      <header className="w-3/6 mb-6 flex items-center justify-between text-left">
-      <a href="/" className="font-mono text-xs text-accent no-underline hover:underline">
+      <header className="relative mb-6 flex items-center justify-center text-left">
+      <a href="/" className="absolute left-1 font-mono text-xs text-accent no-underline hover:underline">
           ← back home
         </a>
         {/* <p className="font-mono text-sm text-terminal m-0 mb-2">&gt; certificates</p> */}
