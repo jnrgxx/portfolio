@@ -24,11 +24,17 @@ export interface JourneyItem {
 
 export const projects: Project[] = [
   {
+    name: 'Tachyon',
+    desc: 'Performance Testing Intelligence Platform',
+    stack: ['.NET', 'React', 'PostgreSQL', 'Docker'],
+    url: 'https://github.com/jnrgxx/Tachyon',
+    featured: true,
+  },
+  {
     name: 'Policy Tracker',
     desc: 'Policy management system with authentication, role-based access, auditing, and REST APIs. Built with clean architecture and best practices in mind.',
     stack: ['.NET', 'Angular', 'PostgreSQL', 'Docker'],
-    url: 'https://github.com/jnrgxx',
-    featured: true,
+    url: 'https://github.com/jnrgxx'
   },
   {
     name: 'Lore of Legends',
@@ -59,7 +65,7 @@ export const projects: Project[] = [
   },
 ]
 
-export const featuredProjects = projects.slice(0, 3)
+export const featuredProjects = projects.slice(0, 6)
 
 export const certificates: Certificate[] = [
   {
